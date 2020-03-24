@@ -1,0 +1,17 @@
+<!ELEMENT usuarios (cliente)>
+<!ELEMENT cliente (datos_personales,datos_fiscales)>
+<!ELEMENT datos_personales (id,nombre,edad,genero)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT datos_fiscales (rfc,compras)>
+<!ELEMENT rfc (persona_fisica,persona_moral)>
+<!ELEMENT persona_fisica (#PCDATA)>
+<!ELEMENT persona_moral (#PCDATA)>
+<!ELEMENT compras (efectivo,tarjeta,fecha)>
+<!ELEMENT efectivo (#PCDATA)>
+<!ELEMENT tarjeta (debito,credito)>
+<!ELEMENT debito (#PCDATA)>
+<!ELEMENT credito (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>

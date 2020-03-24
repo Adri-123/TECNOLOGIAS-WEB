@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="localhost"
+xmlns="localhost"
+elementFormDefault="qualified">
+
+
+<xs:complexType name="datos_personales_type">
+    <xs:sequence>
+        <xs:element name="id" type="xs:string"/>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="edad" type="xs:integer"/>
+        <xs:element name="genero" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+
+<xs:complexType name="datos_fiscales_type">
+    <xs:sequence>
+        <xs:element name="rfc" type="rfc_type"/>
+        <xs:element name="compras" type="compras_type"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rfc_type">
+    <xs:sequence>
+        <xs:element name="persona_fisica" type="xs:string"/>
+        <xs:element name="persona_moral" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tarjeta_type">
+    <xs:sequence>
+        <xs:element name="debito" type="xs:string"/>
+        <xs:element name="credito" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="compras_type">
+    <xs:sequence>
+        <xs:element name="efectivo" type="xs:string"/>
+        <xs:element name="tarjeta" type="tarjeta_type"/>
+        <xs:element name="fecha" type="xs:date"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cliente_type">
+    <xs:sequence>
+        <xs:element name="datos_personales" type="datos_personales_type"/>
+        <xs:element name="datos_fiscales" type="datos_fiscales_type"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="usuarios">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="cliente" type="cliente_type"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema> 

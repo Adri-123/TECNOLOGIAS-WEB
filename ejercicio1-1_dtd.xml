@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<usuarios xmlns="localhost"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="localhost ejercicio1-1.xsd">
+    <cliente>
+        <datos_personales>
+            <id>1</id>
+            <nombre>Aaron</nombre>
+            <edad>20</edad>
+            <genero>Masculino</genero>
+        </datos_personales>
+        <datos_fiscales>
+            <rfc>
+                <persona_fisica>DFDSDFDFWE2131223</persona_fisica>
+                <persona_moral>DFDSDFDFWE2131223</persona_moral>
+            </rfc>
+            <compras>
+                <efectivo>500</efectivo>
+                <tarjeta>
+                    <debito>131232131231231</debito>
+                    <credito>123123123123123</credito>
+                </tarjeta>
+                <fecha>2020-03-21</fecha>
+            </compras>
+        </datos_fiscales>
+    </cliente>
+</usuarios>

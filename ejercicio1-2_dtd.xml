@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE usuarios SYSTEM "ejercicio1-2.dtd">
+<usuarios>
+    <proveedor>
+        <datos_personales>
+            <id>1</id>
+            <nombre>Aaron</nombre>
+            <edad>20</edad>
+            <direccion>Masculino</direccion>
+        </datos_personales>
+        <datos_fiscales>
+            <rfc>
+                SDWQDQ31231DDSA
+            </rfc>
+            <facturas_emitidas>
+                2
+            </facturas_emitidas>
+        </datos_fiscales>
+        <beneficios>
+            <descuento>0.15</descuento>
+            <mayoreo>0.30</mayoreo>
+        </beneficios>
+    </proveedor>
+</usuarios>

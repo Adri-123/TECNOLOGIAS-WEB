@@ -1,0 +1,13 @@
+<!ELEMENT usuarios (proveedor)>
+<!ELEMENT proveedor (datos_personales,datos_fiscales,beneficios)>
+<!ELEMENT datos_personales (id,nombre,edad,direccion)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT datos_fiscales (rfc,facturas_emitidas)>
+<!ELEMENT rfc (#PCDATA)>
+<!ELEMENT facturas_emitidas (#PCDATA)>
+<!ELEMENT beneficios (descuento,mayoreo)>
+<!ELEMENT descuento (#PCDATA)>
+<!ELEMENT mayoreo (#PCDATA)>

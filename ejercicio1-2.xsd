@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="localhost"
+xmlns="localhost"
+elementFormDefault="qualified">
+
+
+<xs:complexType name="datos_personales_type">
+    <xs:sequence>
+        <xs:element name="id" type="xs:string"/>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="edad" type="xs:integer"/>
+        <xs:element name="direccion" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+
+<xs:complexType name="datos_fiscales_type">
+    <xs:sequence>
+        <xs:element name="rfc" type="xs:string"/>
+        <xs:element name="facturas_emitidas" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="beneficios_type">
+    <xs:sequence>
+        <xs:element name="descuento" type="xs:decimal"/>
+        <xs:element name="mayoreo" type="xs:decimal"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="proveedor_type">
+    <xs:sequence>
+        <xs:element name="datos_personales" type="datos_personales_type"/>
+        <xs:element name="datos_fiscales" type="datos_fiscales_type"/>
+        <xs:element name="beneficios" type="beneficios_type"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="usuarios">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="proveedor" type="proveedor_type"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema> 
